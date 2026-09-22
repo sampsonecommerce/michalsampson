@@ -1,0 +1,45 @@
+# Exact rules first (Cloudflare evaluates top-down; splats last).
+# Old Folyou site (/he/...), July 2026 rebuild paths, and brief IA aliases.
+/he/home                       /                        301
+/he/home/                      /                        301
+/he                            /                        301
+/he/                           /                        301
+/he/88/61                      /services/individual     301
+/he/88/31                      /services/couples        301
+/he/88/32                      /services/family         301
+/he/88/57                      /                        301
+/he/88/39                      /services/couples        301
+/he/88/51                      /retreats                301
+/he/88/50                      /services/               301
+/he/88                         /services/               301
+/he/89                         /stories/                301
+/he/97                         /letters                 301
+/he/98                         /letters                 301
+/he/99                         /letters                 301
+/he/100                        /letters                 301
+/index.html                    /                        301
+/services/tipul-ishi.html      /services/individual     301
+/services/tipul-ishi           /services/individual     301
+/services/tipul-zugi.html      /services/couples        301
+/services/tipul-zugi           /services/couples        301
+/services/tipul-mishpachti.html /services/family        301
+/services/tipul-mishpachti     /services/family         301
+/services/tipul-online.html    /                        301
+/services/tipul-online         /                        301
+/services/terom-nisuin.html    /services/couples        301
+/services/terom-nisuin         /services/couples        301
+/services/retreat-zugiyut.html /retreats                301
+/services/retreat-zugiyut      /retreats                301
+/services/asufa.html           /services/               301
+/services/asufa                /services/               301
+/stories/index.html            /stories/                301
+/online-therapy                /                        301
+/services                      /services/               301
+/stories                       /stories/                301
+/blog                          /stories/                301
+
+# Splats
+/he/89/*                       /stories/                301
+/he/*                          /                        301
+/en/*                          /                        301
+/blog/*                        /stories/                301

@@ -1,0 +1,14 @@
+{
+  "name": "michalsampson",
+  "private": true,
+  "version": "2.0.0",
+  "description": "michalsampson.co.il - Hebrew RTL online-therapy site on Cloudflare Workers static assets",
+  "scripts": {
+    "build": "python3 build.py",
+    "dev": "python3 build.py && wrangler dev --port 4599",
+    "deploy": "python3 build.py && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.136.2"
+  }
+}
