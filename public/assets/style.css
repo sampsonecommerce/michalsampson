@@ -20,7 +20,7 @@
 }
 /* ============ RESET ============ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:90px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:90px;color-scheme:light}
 body{
   font-family:var(--font-body);color:var(--ink);background:var(--paper);
   line-height:1.8;font-size:18px;font-weight:400;
@@ -278,6 +278,8 @@ a.contact-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);bord
   border:1.5px solid var(--line-2);border-radius:var(--r-sm);padding:.8em 1em;transition:.25s var(--ease);
 }
 .field select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316938d' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left .9em center;background-size:1.1em;padding-inline-start:2.6em}
+.field select{color-scheme:light}
+.field select option{background:#fff;color:var(--ink)}
 .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--teal-400);box-shadow:0 0 0 4px var(--teal-50)}
 .field input:user-invalid,.field textarea:user-invalid{border-color:#c94b4b}
 .field textarea{resize:vertical;min-height:110px}
