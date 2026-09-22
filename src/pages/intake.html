@@ -1,0 +1,96 @@
+---
+title: שאלון היכרות לפני המפגש הראשון | מיכל סמפסון
+description: שאלון היכרות קצר שממלאים לפני המפגש הראשון. הפרטים מגיעים למיכל בלבד ועוזרים להתחיל את הטיפול מהמקום הנכון.
+priority: 0.3
+body_class: page-article
+---
+<section class="article-hero wrap">
+  <p class="crumbs"><a href="/">בית</a><span>«</span><span>שאלון היכרות</span></p>
+  <p class="eyebrow">לפני המפגש הראשון</p>
+  <h1>שאלון היכרות</h1>
+  <p class="lead">כמה שאלות שעוזרות לנו להתחיל מהמקום הנכון. ממלאים אחרי שיחת ההיכרות ולפני המפגש הראשון. לוקח כ-5 דקות. התשובות מגיעות אליי בלבד ונשמרות בסודיות. אין תשובות נכונות או לא נכונות, ואפשר לדלג על מה שלא נוח.</p>
+  <p class="note-inline">לפני שממלאים, מומלץ לקרוא את <a href="/terms">ההסכם הטיפולי ותנאי השירות</a>.</p>
+</section>
+
+<section class="article-body wrap">
+  <div class="form-card form-card-wide" id="form">
+    <form id="intakeForm" class="lead-form" method="post" action="/api/lead" novalidate>
+      <input type="hidden" name="type" value="intake">
+      <input type="hidden" name="page" value="">
+      <p class="hp" aria-hidden="true"><label>אל תמלאו שדה זה <input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+
+      <h2 class="form-h">פרטים בסיסיים</h2>
+      <div class="field-row">
+        <div class="field"><label for="i-name">שם מלא <i>*</i></label><input id="i-name" name="name" type="text" autocomplete="name" required minlength="2"></div>
+        <div class="field"><label for="i-age">גיל</label><input id="i-age" name="age" type="number" inputmode="numeric" min="18" max="120" dir="ltr"></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="i-phone">טלפון <i>*</i></label><input id="i-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required minlength="7" dir="ltr"></div>
+        <div class="field"><label for="i-email">אימייל <i>*</i></label><input id="i-email" name="email" type="email" autocomplete="email" required dir="ltr"></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="i-location">עיר ומדינה</label><input id="i-location" name="location" type="text" placeholder="לדוגמה: ברלין, גרמניה"></div>
+        <div class="field"><label for="i-tz">אזור זמן / הפרש מישראל</label><input id="i-tz" name="timezone" type="text" placeholder="לדוגמה: שעה אחורה"></div>
+      </div>
+      <div class="field">
+        <label for="i-service">סוג הטיפול</label>
+        <select id="i-service" name="service">
+          <option value="טיפול אישי">טיפול אישי</option>
+          <option value="טיפול זוגי">טיפול זוגי</option>
+          <option value="טיפול משפחתי">טיפול משפחתי</option>
+          <option value="הדרכת הורים">הדרכת הורים</option>
+          <option value="ליווי רילוקיישן">ליווי רילוקיישן</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="i-participants">מי ישתתף במפגשים? (בטיפול זוגי/משפחתי: שמות וגילאים)</label>
+        <input id="i-participants" name="participants" type="text">
+      </div>
+
+      <h2 class="form-h">מה מביא אותך</h2>
+      <div class="field">
+        <label for="i-reason">מה מביא אותך לטיפול עכשיו? <i>*</i></label>
+        <textarea id="i-reason" name="reason" required minlength="10" maxlength="4000" placeholder="במילים שלך. מה קורה, מאז מתי, ומה היית רוצה שישתנה."></textarea>
+      </div>
+      <div class="field">
+        <label for="i-goals">מה היית רוצה לקחת מהטיפול? איך תדע/י שזה עוזר?</label>
+        <textarea id="i-goals" name="goals" maxlength="2000"></textarea>
+      </div>
+      <div class="field">
+        <label for="i-history">ניסיון טיפולי קודם (מתי, כמה זמן, מה עזר ומה פחות)</label>
+        <textarea id="i-history" name="history" maxlength="2000"></textarea>
+      </div>
+      <div class="field">
+        <label for="i-health">יש משהו שחשוב לי לדעת מראש? (מצב רפואי, טיפול תרופתי, אירועים משמעותיים)</label>
+        <textarea id="i-health" name="health" maxlength="2000"></textarea>
+      </div>
+      <div class="field">
+        <label for="i-support">מי נמצא סביבך? (משפחה, בני זוג, חברים, קהילה)</label>
+        <textarea id="i-support" name="support" maxlength="1500"></textarea>
+      </div>
+
+      <h2 class="form-h">לוגיסטיקה</h2>
+      <div class="field">
+        <label for="i-availability">מתי בדרך כלל נוח לך להיפגש? (ימים ושעות, בשעון שלך)</label>
+        <input id="i-availability" name="availability" type="text">
+      </div>
+      <div class="field">
+        <label for="i-emergency">איש קשר למקרה חירום (שם, קרבה וטלפון)</label>
+        <input id="i-emergency" name="emergency_contact" type="text">
+      </div>
+      <div class="field field-check">
+        <label><input type="checkbox" name="consent" value="yes" required> קראתי את <a href="/terms">ההסכם הטיפולי ותנאי השירות</a> ואת <a href="/privacy">מדיניות הפרטיות</a>, ואני מאשר/ת <i>*</i></label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block"><span class="btn-label">שליחת השאלון</span></button>
+      <p class="form-note">השאלון נשלח ישירות למיכל ואינו משותף עם אף גורם אחר.</p>
+      <p class="form-error" role="alert" hidden></p>
+    </form>
+    <div class="form-success" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+      <h3>תודה, השאלון התקבל</h3>
+      <p>נתראה במפגש הראשון. אם עולה משהו לפני כן, אני זמינה בוואטסאפ.</p>
+      <a href="https://wa.me/972506264382" target="_blank" rel="noopener" class="btn btn-whatsapp">וואטסאפ</a>
+    </div>
+  </div>
+</section>

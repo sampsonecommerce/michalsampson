@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "michalsampson",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-07-07",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    "LEAD_TO": "micsam4@gmail.com"
+  }
+  // Secrets (not in git): RESEND_API_KEY, optionally LEAD_FROM.
+  //   npx wrangler secret put RESEND_API_KEY
+}
